@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8080;
+const PORT = process.env.PORT || 8080;
 const path = require("path")
 
 
@@ -16,7 +16,7 @@ app.get("/login",(req,res)=>{
     res.sendFile(path.resolve(__dirname + "/views/login.html"))
 })
 
-app.listen(port,()=>{
-    console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT,()=>{
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
 
